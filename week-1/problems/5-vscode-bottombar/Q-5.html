@@ -1,0 +1,126 @@
+<!-- Now try making the bottom bar look like photo.png - https://github.com/100xdevs-cohort-3/assignments/raw/main/week-1/problems/5-vscode-bottombar/photo.png  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-5</title>
+    <style>
+        *{
+            color: #9ba3b4;
+            background-color: #0e0e0e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1px;
+            margin-top: 100px;
+            margin-right: 50px;
+            margin-left: 50px;
+            align-content:start;
+        }
+
+        .content {
+            max-height:max-content;
+            width: 360px;
+            align-items: center;
+            padding-left: 30px;
+        }
+        
+        h1{
+            font-size: 2.3vw;
+            margin-top: 0;
+            color: #e9eaeb;
+            font-weight: 600;
+        }
+
+        .desc {
+            font-weight: 500;
+            line-height: 25px;
+            text-align:start;
+        }
+        
+        img{
+            height: 40px;
+        }
+
+        .logos {
+            display: grid;
+            grid-template-columns:auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            column-gap: 135px;
+            row-gap: 1px;
+        }
+
+        .item{
+            display: flex;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Code in any language</h1>
+            <p class="desc">VS Code supports almost every major programming launguage.Several ship in the box, like , TypeScript, CSS and HTML, but extensions for other can be found in the VS Code Marketplace.</p>
+        </div>
+        <div class="logos">
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-js.png" alt="#">
+                <p>JavaScript</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-ts.png" alt="#">
+                <p>TypeScript</p>
+                <p></p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-python.png" alt="#">
+                <p>Python</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-cs.png" alt="#">
+                <p>C#</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-cpp.png" alt="#">
+                <p>C++</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-html.png" alt="#">
+                <p>Html</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-java.png" alt="#">
+                <p>Java</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-json.png" alt="#">
+                <p>Json</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-php.png" alt="#">
+                <p>Php</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-markdown.png" alt="#">
+                <p>Markdown</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-powershell.png" alt="#">
+                <p>Powershell</p>
+            </div>
+            <div class="item">
+                <img src="https://code.visualstudio.com/assets/home/language-yaml.png" alt="#">
+                <p>Yaml</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

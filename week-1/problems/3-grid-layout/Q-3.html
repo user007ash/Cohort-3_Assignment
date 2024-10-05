@@ -1,0 +1,39 @@
+<!-- Same as the last problem but vertically align the "Hello World" text to the center of the page vertically and horizontally. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+        
+        .box1 {
+            text-align: center;
+            padding: 10px;
+            background-color: cadetblue;
+        }
+        
+        .box2 {
+            text-align: center;
+            padding: 10px;
+            grid-column-start:2;
+            grid-column-end:4;            
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Left</div>
+        <div class="box2">Right</div>
+    </div>
+</body>
+</html>
