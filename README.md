@@ -1,1 +1,0 @@
-# I am documenting my assignments to imporve my skills and manage my work.cela
