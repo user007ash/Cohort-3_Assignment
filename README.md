@@ -1,4 +1,4 @@
 # 100xdevs Cohort-3 Assignments
 
-This is for tracking my progress.
+This is for tracking my progress in Cohort-3.
 
