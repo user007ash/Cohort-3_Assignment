@@ -5,3 +5,21 @@ You can use the fs library to as a black box, the goal is to understand async ta
 Try to do an expensive operation below the file read and see how it affects the output. 
 Make the expensive operation more and more expensive and see how it affects the output. 
 
+const fs = require('fs');
+
+let testFile = fs.readFile('C:\Users\SAI RAM\Desktop\practice\Cohort-3_Assignment\week-2\week-2-async-js\solutions\easy\example.txt','utf-8',(err,data)=>{
+  if (err) {
+    console.log(err);
+  }else{
+    console.log(data);
+  }
+});
+
+let a = 4
+for (let i = 0;i<=10000000000;i++){
+  continue;
+  a ++;
+}
+
+console.log(testFile);
+

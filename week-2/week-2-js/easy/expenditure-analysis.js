@@ -25,9 +25,9 @@ function calculateTotalSpentByCategory(transactions) {
   });
   const totalTransactions = [];
   for (const category in categoryTotalMap) {
-    totalTransactions.push({category,totalSpent:categoryTotalMap[category]})
+    totalTransactions.push({category:category,totalSpent:categoryTotalMap[category]})
   }
-  return totalTransactions;
+  totalTransactions;
 
 }
 
