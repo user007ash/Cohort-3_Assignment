@@ -14,9 +14,9 @@
   }
   
   .form {
-  
     background-color: #c59771bd;
     max-width: 550px;
+    max-height: 900px;
     margin: 20px auto;
     padding: 30px;
     text-align: left;
@@ -24,7 +24,7 @@
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
     font-family: inherit;
     font-weight: 800;
-  
+    
   }
   
   div {

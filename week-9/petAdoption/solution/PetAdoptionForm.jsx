@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import AdopterData from './AdopterData';
-import { validation } from "../utils/validation"
-
+import React, { useState } from "react";
+import AdopterData from "./AdopterData";
+import { validation } from "../utils/validation";
 
 const PetAdoptionForm = () => {
     const [formData, setFormData] = useState([]);
@@ -11,7 +10,7 @@ const PetAdoptionForm = () => {
         breed: "",
         adopterName: "",
         email: "",
-        phone: ""
+        phone: "",
     });
 
     const [showTable, setShowTable] = useState(false);
@@ -24,7 +23,7 @@ const PetAdoptionForm = () => {
         breed: "",
         adopterName: "",
         email: "",
-        phone: ""
+        phone: "",
     });
     const handleChange = (event) => {
         /* The code snippet `const { name, value } = event.target;` is extracting the `name` and `value`
@@ -42,8 +41,7 @@ const PetAdoptionForm = () => {
         let errorsCopy = { ...errors };
         const errorR = validation(name, value, errorsCopy);
         setErrors(errorR);
-
-    }
+    };
     const handleSubmit = () => {
         console.log(
             `Pet Name: ${petName} 
@@ -53,9 +51,7 @@ const PetAdoptionForm = () => {
             Email: ${email} 
             Phone: ${phone}`
         );
-        if (!petName
-            || !breed || !adopterName
-            || !email || !phone) {
+        if (!petName || !breed || !adopterName || !email || !phone) {
             alert("Please fill out all fields");
             return;
         }
@@ -76,17 +72,17 @@ const PetAdoptionForm = () => {
             breed: "",
             adopterName: "",
             email: "",
-            phone: ""
-        })
+            phone: "",
+        });
         setErrors({
             petName: "",
             petType: "",
             breed: "",
             adopterName: "",
             email: "",
-            phone: ""
-        })
-    }
+            phone: "",
+        });
+    };
 
     /**
      * The handleGoBack function toggles the value of showTable.
@@ -95,7 +91,7 @@ const PetAdoptionForm = () => {
 
     if (!showTable) {
         return (
-            <div className='form'>
+            <div className="form">
                 <div>
                     <label htmlFor="petName">Pet Name</label>
                     <input
@@ -109,7 +105,11 @@ const PetAdoptionForm = () => {
                 </div>
                 <div>
                     <label htmlFor="petType">Pet Type</label>
-                    <select value={petType} name="petType" onChange={handleChange}>
+                    <select
+                        value={petType}
+                        name="petType"
+                        onChange={handleChange}
+                    >
                         <option value="Dog">Dog</option>
                         <option value="Cat">Cat</option>
                         <option value="Rabbit">Rabbit</option>
@@ -128,32 +128,37 @@ const PetAdoptionForm = () => {
                     <small>{errors.breed}</small>
                 </div>
                 <div>
-                    <label htmlFor='adopterName'>Your Name</label>
-                    <input type="text"
+                    <label htmlFor="adopterName">Your Name</label>
+                    <input
+                        type="text"
                         name="adopterName"
-                        placeholder='Your Name'
+                        placeholder="Your Name"
                         value={adopterName}
-                        onChange={handleChange} />
+                        onChange={handleChange}
+                    />
                     <small>{errors.adopterName}</small>
                 </div>
                 <div>
-                    <label htmlFor='email'>
-                        Email
-                    </label>
-                    <input type="email" name="email" placeholder='Email' value={email} onChange={handleChange} />
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={handleChange}
+                    />
                     <small>{errors.email}</small>
                 </div>
                 <div>
-                    <label htmlFor='phone'>
-                        Phone
-                    </label>
-                    <input type="text"
+                    <label htmlFor="phone">Phone</label>
+                    <input
+                        type="text"
                         name="phone"
-                        placeholder='Phone'
+                        placeholder="Phone"
                         value={phone}
-                        onChange={handleChange} />
+                        onChange={handleChange}
+                    />
                     <small>{errors.phone}</small>
-
                 </div>
                 <div>
                     <button type="submit" onClick={handleSubmit}>
@@ -161,11 +166,16 @@ const PetAdoptionForm = () => {
                     </button>
                 </div>
             </div>
-        )
+        );
     }
     /* The line `return <AdopterData formData={formData} handleGoBack={handleGoBack}></AdopterData>` is
     rendering the `AdopterData` component with the `formData` and `handleGoBack` props passed to it. */
-    return <AdopterData formData={formData} handleGoBack={handleGoBack}></AdopterData>
-}
+    return (
+        <AdopterData
+            formData={formData}
+            handleGoBack={handleGoBack}
+        ></AdopterData>
+    );
+};
 
-export default PetAdoptionForm
+export default PetAdoptionForm;

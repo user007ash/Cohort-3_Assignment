@@ -1,64 +1,83 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const PetAdoptionForm = () => {
+function PetAdoptionForm() {
+    const [formData, setFormData] = useState([]);
+    const [values, setValues] = useState({
+        petName: "",
+        petType: "",
+        breed: "",
+        name: "",
+        email: "",
+        phone: "",
+    });
 
-  const [petName, setPetName] = useState('')
-  const [petType, setPetType] = useState('')
-  const [breed, setBreed] = useState('')
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [submit, setSubmit] = useState(false)
+    const [showTable, setShowTable] = useState(false);
+    const [errors, setErrors] = useState({
+        petName: "",
+        petType: "",
+        breed: "",
+        name: "",
+        email: "",
+        phone: "",
+    });
 
-  return (
-    <>
-    <div style={{
-      padding:'12px',
-      fophonentSize:'1rem',
-      fontWeight:'bolder',
-      display:"flex",
-      justifyContent:"center",
-      alignItems:"center",
-      height:'86vh'
-    }}>
-      <form 
-      style={{
-        width:'400px',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        background: 'rgba(255, 255, 255, 0.1)',
-        padding:'18px',
-        textAlign:'left'
-      }}>
-        <label>
-          Pet Name
-          <input type="text" value={petName} onChange={(e)=>setPetName(e.target.value)} />
-        </label>
-        <label>
-          Pet Type
-          <input type="text" value={petType} onChange={(e)=>setPetType(e.target.value)} />
-        </label>
-        <label>
-          Breed
-          <input type="text" value={breed} onChange={(e)=>setBreed(e.target.value)} />
-        </label>
-        <label>
-          Your Name
-          <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
-        </label>
-        <label>
-          Email
-          <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
-        </label>
-        <label>
-          Phone
-          <input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} />
-        </label>
-        <button type="submit" onClick={()=>setSubmit(currsubmit=>!currsubmit)}>Submit</button>
-      </form>
-    </div>
-    </>
-  );
-};
+    return (
+        <div className="form">
+            <div>
+                <label htmlFor="petName">Pet Name</label>
+                <input
+                    type="text"
+                    name="petName"
+                    placeholder="Enter Pet Name"
+                />
+                <small></small>
+            </div>
+            <div>
+                <label htmlFor="petType">Pet type</label>
+                <select name="petType">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Hamster">Hamster</option>
+                </select>
+                <small></small>
+            </div>
+            <div>
+                <label htmlFor="petBreed">Pet Breed</label>
+                <input
+                    type="text"
+                    name="petBreed"
+                    placeholder="Enter Pet Breed"
+                />
+                <small></small>
+            </div>
+            <div>
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" placeholder="Enter your Name" />
+                <small></small>
+            </div>
+            <div>
+                <label htmlFor="email">Email</label>
+                <input type="text" name="email" placeholder="Enter Email" />
+                <small></small>
+            </div>
+            <div>
+                <label htmlFor="phoneNumber">Phone Number</label>
+                <input
+                    type="text"
+                    name="phoneNumber"
+                    placeholder="Enter Phone Number"
+                />
+                <small></small>
+            </div>
+            <div>
+                <button type="submit" >
+                    Submit
+                </button>
+            </div>
+        </div>
+    );
+}
 
 export default PetAdoptionForm;
