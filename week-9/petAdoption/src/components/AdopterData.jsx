@@ -1,24 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class AdopterData extends Component {
     render() {
         const { formData, handleGoBack } = this.props;
         return (
-            <div>
-                <table styele={{
-                    borderCollapse: "collapse",
-                    width: "100%",
-                    border: "1px solid #ddd",
-                    fontSize: "18px",
-                    textAlign: "left",
-                    padding: "8px",
-                    backgroundColor: "#f2f2f2",
-                    color: "#333",
-                    textTransform: "capitalize",
-                    fontFamily: "Arial, sans-serif",
-                    marginTop: "20px",
-                    marginBottom: "20px",
-                }}>
+            <div style={{height:"100vh"}}>
+                <table
+                    style={{
+                        borderCollapse: "collapse",
+                        width: "80%",
+                        border: "1px solid #ddd",
+                        fontSize: "18px",
+                        textAlign: "left",
+                        padding: "8px",
+                        backgroundColor: "#f2f2f2",
+                        color: "#333",
+                        textTransform: "capitalize",
+                        fontFamily: "Arial, sans-serif",
+                        marginTop: "20px",
+                        marginBottom: "20px",
+                    }}
+                >
                     <thead>
                         <tr>
                             <th>Pet Name</th>
@@ -30,14 +32,14 @@ class AdopterData extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {formData.map((data, index) => (
+                        {formData.map((value, index) => (
                             <tr key={index}>
-                                <td>{data.petName}</td>
-                                <td>{data.petType}</td>
-                                <td>{data.breed}</td>
-                                <td>{data.adopterName}</td>
-                                <td>{data.email}</td>
-                                <td>{data.phone}</td>
+                                <td>{value.petName}</td>
+                                <td>{value.breed}</td>
+                                <td>{value.name}</td>
+                                <td>{value.petType}</td>
+                                <td>{value.email}</td>
+                                <td>{value.phone}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -46,18 +48,18 @@ class AdopterData extends Component {
                     <button
                         onClick={handleGoBack}
                         style={{
-                            padding: "10px 20px", 
+                            padding: "10px 20px",
                             boxSizing: "border-box",
-                            width: "auto", 
-                            display: "inline-block" 
+                            width: "auto",
+                            display: "inline-block",
                         }}
                     >
                         Go Back
                     </button>
                 </div>
             </div>
-        )
+        );
     }
 }
 
-export default AdopterData
+export default AdopterData;
