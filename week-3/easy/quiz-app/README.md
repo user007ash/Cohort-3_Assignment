@@ -1,13 +1,12 @@
+# React + Vite
 
-# Quiz-App
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Your task is to design and implement a Quiz application that meets the following requirements:
+Currently, two official plugins are available:
 
-- The UI should resemble the example shown [here](https://utfs.io/f/032c6baa-e76a-4e26-b6b2-f6a105c15f03-pym7du.webm)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- display the result after submitting the quiz.
+## Expanding the ESLint configuration
 
-- you don't need to use api or backend, use data mentioned in `data.js`
-
-
-### Don't copy UI as it is, only take reference from it.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
