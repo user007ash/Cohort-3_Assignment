@@ -6,7 +6,7 @@ function ResultCard({ score, handleRestart,totalLength }) {
         You scored <span className="text-green-400 font-bold">{score}</span> out of
         {" "+totalLength}
       </p>
-      <p className="text-md text-neutral-300">Great job! 🎉</p>
+      <p className="text-md text-neutral-300">{score>totalLength-1?"Great job! 🎉":"Keep Practicing 💪"}</p>
       <button
         onClick={handleRestart}
         className="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-500  rounded-lg transition-colors"

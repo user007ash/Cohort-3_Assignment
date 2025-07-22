@@ -18,8 +18,8 @@ function App() {
     if (quizData.length - 1 > currQuestion) {
       setCurrQuestion(currQuestion + 1);
     } else if (currQuestion === quizData.length - 1) {
-      setIsSubmitted(true);
       handleSubmit();
+      setIsSubmitted(true);
     }
   };
 
@@ -32,25 +32,31 @@ function App() {
   };
 
   const handleSubmit = () => {
-   for (let i = 0;i<quizData.length;i++){
-    if (selectedAns[i] === quizData[i].correct){
-      setScore(prev=>prev+1);
+    let tempScore = 0;
+    for (let i = 0; i < quizData.length; i++) {
+      if (selectedAns[i] === quizData[i].correct) {
+        tempScore++;
+      }
     }
-   }
+    setScore(tempScore);
   };
 
   const handleRestart = () => {
     setCurrQuestion(0);
     setIsSubmitted(false);
     setScore(0);
-    setSelectedAns({})
-  }
+    setSelectedAns({});
+  };
 
   return (
     <>
       <div className="h-screen w-full bg-neutral-800 flex justify-center items-center ">
         {isSubmitted ? (
-          <ResultCard score={score} handleRestart = {handleRestart} totalLength = {quizData.length-1} />
+          <ResultCard
+            score={score}
+            handleRestart={handleRestart}
+            totalLength={quizData.length}
+          />
         ) : (
           <Card
             currIdx={currQuestion}
