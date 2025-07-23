@@ -2,20 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css">
-    <title>Vite App</title>
+    <title>Vite + React</title>
   </head>
-  <body class="bg-slate-500">
-    <div id="main" class="border bg-slate-200 m-10 p-2 flex justify-center">
-      <form action="/action_page.php" method="get">
-        <input list="pokemon-types" id="pokemonType" name="pokemon-type" placeholder="Enter Pokémon Type" class="bg-slate-400 py-1.5 px-1.5 rounded-md text-gray-100">
-        <datalist id="pokemon-types" >
-        </datalist>
-        <input type="submit" class="border px-2 py-1 rounded-md ">
-      </form>
-      
-    </div>
-    <script type="module" src="/src/main.js"></script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
