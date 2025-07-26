@@ -1,5 +1,5 @@
 function LeftMain({ currElement, handleAddElement, setCurrentElement, setElemLabel,elemLabel }) {
-  const options = ["input", "checkbox", "button", "radio"];
+  const options = ["input", "checkbox", "button", "radio","label"];
   return (
     <div className="md:h-screen h-[50vh] w-full bg-neutral-900 text-white flex justify-center items-center">
       <div className="flex flex-col md:flex-row items-center gap-4 bg-neutral-800 p-5 rounded-md border border-neutral-700">

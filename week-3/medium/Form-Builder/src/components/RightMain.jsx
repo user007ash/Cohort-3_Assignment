@@ -2,6 +2,7 @@ import CheckBox from "./CheckBox";
 import RadioButton from "./RadioButton";
 import Input from "./Input";
 import Button from "./Button";
+import Label from "./Label";
 
 function RightMain({ formElement, elemLabel }) {
 
@@ -15,6 +16,8 @@ function RightMain({ formElement, elemLabel }) {
         return <CheckBox {...props} />;
       case "radio":
         return <RadioButton {...props} />;
+      case "label":
+        return <Label {...props} />;
       default:
         return null;
     }

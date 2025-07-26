@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Label() {
+function Label({ label }) {
   return (
-    <div>Label</div>
-  )
+    <label className="text-sm text-neutral-300 block px-2 py-1">
+      {label || "Default Label"}
+    </label>
+  );
 }
 
-export default Label
+export default Label;
