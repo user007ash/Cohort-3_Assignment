@@ -4,7 +4,7 @@ import Input from "./Input";
 import Button from "./Button";
 import Label from "./Label";
 
-function RightMain({ formElement, elemLabel }) {
+function RightMain({ formElement }) {
 
   const renderElement = (type, props) => {
     switch (type) {
